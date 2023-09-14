@@ -8,7 +8,7 @@ class Game(object):
         whose_move -- кто первым ходит (по умолчанию 'X')."""
 
     # по умолчанию первым будет ходить игрок 'X', либо передать аргумент букву 'O'
-    def __init__(self, whose_move = 'X'):
+    def __init__(self, whose_move='X'):
         self.whose_move = whose_move
         self.field = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
@@ -17,7 +17,7 @@ class Game(object):
 
         Ключевые аргументы:
 
-            field_id -- номер поля."""
+            cell_id -- номер ячейки."""
         self.field[cell_id] = self.whose_move
 
     def change_player(self):
@@ -30,11 +30,15 @@ class Game(object):
     def get_move(self):
         """Узнать чей ход.
 
-        Ход может быть игрока X или O."""
+        Возвращает:
+
+            whose_move -- ход может быть игрока 'X' или 'O'."""
         return self.whose_move
 
     def get_field(self):
         """Получить ячейки из поля(поле целиком).
 
-        Лист из 9 значений."""
+        Возвращает:
+
+            field -- list с 9-ью значениями."""
         return self.field

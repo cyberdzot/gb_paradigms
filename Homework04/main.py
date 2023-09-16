@@ -2,7 +2,7 @@ from numpy import corrcoef as corr_pirson
 from random import randint as rand_int
 
 
-def get_corr(arr1: list[int], arr2: list[int]) -> int:
+def get_corr(arr1: list[int], arr2: list[int]) -> float:
     return corr_pirson(arr1, arr2)[0, 1]
 
 

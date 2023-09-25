@@ -10,7 +10,9 @@ def find_pos(num_list, number, first, last):
     else:
         return find_pos(num_list, number, first, middle - 1)
 
-FIRST_INDEX = 0
+
 num_list = sorted([12, 1, 9, 2, 7, 3])
+FIRST_INDEX = 0
+LAST_INDEX = len(num_list) - 1
 number = 12
-print(find_pos(num_list, number, FIRST_INDEX, len(num_list) - 1))
+print(find_pos(num_list, number, FIRST_INDEX, LAST_INDEX))
